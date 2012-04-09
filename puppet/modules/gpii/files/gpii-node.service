@@ -1,0 +1,13 @@
+[Unit]
+Description=GPII Node.js daemon
+After=syslog.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/node /vagrant/gpii/linux/gpii.js
+StandardOutput=syslog
+User=vagrant
+Group=vagrant
+
+[Install]
+WantedBy=multi-user.target
