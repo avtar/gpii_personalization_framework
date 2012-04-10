@@ -15,6 +15,7 @@ Vagrant::Config.run do |config|
   config.vm.customize ['modifyvm', :id, '--cpus', '2']
   config.vm.customize ['modifyvm', :id, '--vram', '16']
   config.vm.customize ['modifyvm', :id, '--accelerate3d', 'on']
+  config.vm.customize ['modifyvm', :id, '--usb', 'on']
 
   # This gets rid of the dbus-launch "Autolaunch error: X11 initialization failed" errors
   config.ssh.forward_x11 = true
